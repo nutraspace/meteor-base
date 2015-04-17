@@ -1,7 +1,7 @@
 # DOCKER-VERSION 0.3.4
 FROM  phusion/passenger-nodejs
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get update -y && apt-get upgrade -y
 RUN	apt-get install -y curl build-essential git python-software-properties python g++ make openssl graphicsmagick
 RUN curl http://nodejs.org/dist/v0.10.36/node-v0.10.36.tar.gz > node-v0.10.36.tar.gz; tar xvf node-v0.10.36.tar.gz; cd node-v0.10.36; ./configure; make; make install;
 
