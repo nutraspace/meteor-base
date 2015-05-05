@@ -10,3 +10,15 @@ RUN npm install -g node-gyp;
 RUN npm install -g redis;
 RUN npm install -g meteorite;
 RUN echo tlsv1 > $HOME/.curlrc
+
+RUN sudo apt-get update;
+RUN sudo apt-get -y install libgmp10 libgmp10-dev libcrypto++9 libreadline5 libreadline-dev libntl0 libntl-dev wget flex bison zlib1g-dev libssl-dev curl;
+# RUN cd /usr/lib/x86_64-linux-gnu/; sudo ln -s libgmp.so.10.1.3 libgmp.so;
+ 
+RUN cd /; wget http://crypto.stanford.edu/pbc/files/pbc-0.5.14.tar.gz; tar -xvf pbc-0.5.14.tar.gz; cd pbc-0.5.14; ./configure; make; make install;
+
+# will break if crypto isn't setup
+RUN ls /usr/lib/x86_64-linux-gnu/libcrypto*
+
+#install meteor from source now
+RUN curl https://install.meteor.com/ | sh
