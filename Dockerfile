@@ -1,7 +1,7 @@
 # DOCKER-VERSION 0.3.4
 FROM  phusion/passenger-nodejs
 
-RUN apt-get update && apt-get upgrade
+RUN apt-get update -y && apt-get upgrade -y
 
 RUN	apt-get install -y curl build-essential git python-software-properties python g++ make openssl graphicsmagick libgmp10 libgmp10-dev libcrypto++9 libreadline5 libreadline-dev libntl0 libntl-dev wget flex bison zlib1g-dev libssl-dev curl;
 
