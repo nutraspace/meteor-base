@@ -2,7 +2,7 @@
 FROM  phusion/passenger-nodejs:0.9.15
 
 #we have to force-confdef due to nginx-common prompt issue http://debian-handbook.info/browse/wheezy/sect.automatic-upgrades.html
-RUN yes '' | apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y update && yes '' | apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y upgrade 
+#RUN yes '' | apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y update && yes '' | apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y upgrade 
 
 RUN	apt-get install -y curl build-essential git software-properties-common python g++ make openssl graphicsmagick libgmp10 libgmp10-dev libcrypto++9 libreadline5 libreadline-dev libntl0 libntl-dev wget flex bison zlib1g-dev libssl-dev curl;
 
