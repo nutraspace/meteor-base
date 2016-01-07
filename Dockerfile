@@ -4,7 +4,7 @@ FROM  phusion/passenger-nodejs:0.9.18
 #we have to force-confdef due to nginx-common prompt issue http://debian-handbook.info/browse/wheezy/sect.automatic-upgrades.html
 #RUN yes '' | apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y update && yes '' | apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" -y upgrade 
 
-RUN	apt-get install -y curl build-essential git software-properties-common g++ make openssl curl python;
+RUN	apt-get install -y curl build-essential git software-properties-common g++ make openssl curl python2.7-dev;
 
 RUN curl http://nodejs.org/dist/v0.10.41/node-v0.10.41.tar.gz > node-v0.10.41.tar.gz; tar xvf node-v0.10.41.tar.gz; cd node-v0.10.41; ./configure; make; make install;
 
