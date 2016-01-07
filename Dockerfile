@@ -6,7 +6,7 @@ FROM  phusion/passenger-nodejs:0.9.18
 
 RUN apt-get update
 
-RUN	apt-get install -y curl build-essential git software-properties-common g++ make openssl curl python2.7-dev;
+RUN	apt-get install -y curl build-essential git software-properties-common g++ make openssl curl python2.7-dev python;
 
 RUN curl http://nodejs.org/dist/v0.10.41/node-v0.10.41.tar.gz > node-v0.10.41.tar.gz; tar xvf node-v0.10.41.tar.gz; cd node-v0.10.41; ./configure; make; make install;
 
