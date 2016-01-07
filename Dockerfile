@@ -19,7 +19,7 @@ RUN npm install -g meteorite;
 #RUN cd /; wget http://crypto.stanford.edu/pbc/files/pbc-0.5.14.tar.gz; tar -xvf pbc-0.5.14.tar.gz; cd pbc-0.5.14; ./configure; make; make install;
 
 # will break if crypto isn't setup properly
-RUN ls /usr/lib/x86_64-linux-gnu/libcrypto*
+#RUN ls /usr/lib/x86_64-linux-gnu/libcrypto*
 
 #install meteor from source now, mylar:platform ready and capable
 RUN curl https://install.meteor.com/ | sh
