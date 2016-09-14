@@ -8,7 +8,7 @@ RUN apt-get update
 
 RUN	apt-get install -y curl build-essential git software-properties-common g++ make openssl curl python2.7-dev python;
 
-RUN curl http://nodejs.org/dist/v4.4.7/node-v4.4.7.tar.gz > node-v4.4.7.tar.gz; tar xvf node-v4.4.7.tar.gz; cd node-v4.4.7; ./configure; make; make install;
+RUN curl http://nodejs.org/dist/v0.10.41/node-v0.10.41.tar.gz > node-v0.10.41.tar.gz; tar xvf node-v0.10.41.tar.gz; cd node-v0.10.41; ./configure; make; make install;
 
 RUN npm config set registry http://registry.npmjs.org/
 RUN npm install -g node-gyp;
