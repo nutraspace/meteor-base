@@ -1,5 +1,5 @@
 # DOCKER-VERSION 0.3.4
-FROM  phusion/passenger-nodejs:0.9.18
+FROM  phusion/passenger-nodejs:0.9.20
 
 RUN apt-get update
 
