@@ -1,5 +1,5 @@
-# DOCKER-VERSION 17.06.0-ce-mac19
-FROM  phusion/passenger-nodejs:0.9.20
+# DOCKER-VERSION 17.06.1-ce-mac24
+FROM  phusion/passenger-nodejs:0.9.25
 
 RUN apt-get update
 
